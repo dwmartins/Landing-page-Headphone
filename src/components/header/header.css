@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+header {
+    background-color: #050411;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    height: 40px;
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.menu-hamburguer {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav-list ul li a {
+    margin: 0 30px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-list ul li a:hover {
+    color: #00ffff;
+    transition: 0.8s ease;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    margin-top: 5px
+}
+
+.buy {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.search {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search:hover {
+    color: #00ffff;
+}
+
+.cart {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart:hover {
+    color: #00ffff;
+}
+
+@media screen and (max-width: 740px) {
+    .menu-hamburguer {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        right: -100%;
+
+        transition: 0.5s ease-out;
+
+        width: 50%;
+        min-width: 280px;
+        height: 100vh;
+
+
+
+        background-color: #2f8888c7;
+    }
+
+    .menu.activemenu {
+        right: 0%;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nav-list ul li {
+        margin: 40px 0;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+}
